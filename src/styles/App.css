@@ -1,0 +1,1013 @@
+/* --- GLOBAL STYLES --- */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f9; /* Light gray background matching the Search Page */
+  color: #343a40;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+/* --- COLORS & UTILITIES --- */
+.blue-bg-ui { background-color: #007bff; }
+.blue-text { color: #007bff; }
+.green-text-ui { color: #28a745; }
+
+/* --- HEADER / NAVIGATION (Matching all pages) --- */
+.top-banner-ui {
+  background-color: #e9ecef; /* Very light gray/blue background */
+  text-align: center;
+  padding: 5px 0;
+  font-size: 12px;
+}
+
+.header-main-ui {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link-ui {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-text-ui {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+  margin-left: 5px;
+}
+
+.nav-bar-ui {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-link-ui {
+  text-decoration: none;
+  color: #343a40;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.nav-link-ui.active {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.book-link {
+    background-color: #007bff;
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: normal;
+}
+
+.book-link.active-book {
+    background-color: #0056b3;
+}
+
+
+/* --- LANDING PAGE (Home Page UI) --- */
+.hero-section-ui {
+  background-color: #e9ecef;
+  padding: 50px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hero-content-ui {
+    max-width: 50%;
+}
+
+.hero-content-ui h2 {
+    color: #343a40;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.hero-title-ui {
+  color: #007bff;
+  font-size: 48px;
+  margin: 5px 0 15px;
+}
+
+.chef-avatar-ui {
+    width: 250px; /* Placeholder size for chef image */
+    height: 250px;
+    background-color: #ffc107; /* Yellow background color from the image */
+    border-radius: 50%;
+}
+
+.search-form-container-ui {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.search-form-ui {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.dropdown-wrapper-ui select {
+  padding: 12px 15px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  min-width: 180px;
+}
+
+.search-button-ui {
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+/* --- SUPER DELICIOUS FOOD CAROUSEL --- */
+.food-offers-section-ui {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* --- SWIPER CAROUSEL STYLES (for LandingPage.js) --- */
+
+.carousel-wrapper-ui {
+    /* Max width to align with the rest of the content */
+    max-width: 1000px; 
+    margin: 20px auto 40px;
+    padding: 0 10px;
+}
+
+/* Base style for Swiper container, necessary for proper layout */
+.mySwiper {
+    width: 100%;
+    height: 100%;
+}
+
+.offer-card-ui {
+    /* Container for the image and the 50% OFF label */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+}
+
+.offer-card-ui img {
+    /* Ensure the image fills the card area */
+    width: 100%;
+    height: auto; 
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.offer-card-ui img:hover {
+    transform: scale(1.05);
+}
+
+.offer-card-ui p {
+    /* Styling for the "50% OFF" text */
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 0, 0, 0.85); /* Red background matching the ad banner */
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 10;
+    margin: 0;
+}
+
+/* Optional: Style for the dots/pagination area if enabled in Swiper */
+.swiper-pagination-bullet-active {
+    background: #007bff !important;
+}
+
+
+/* --- SEARCH RESULTS PAGE (Search Page UI) --- */
+.search-bar-mini-ui {
+    background-color: #e9ecef;
+    padding: 15px 40px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.search-bar-mini-ui input {
+    padding: 8px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.results-content-wrapper-ui {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.restaurant-list-column-ui {
+    flex: 3;
+}
+
+.sidebar-ad-ui {
+    flex: 1;
+    background-color: #343a40; /* Dark ad background */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.results-heading-ui { /* Required <h1> */
+    font-size: 28px;
+    color: #343a40;
+    margin-bottom: 5px;
+}
+
+.sub-header-ui {
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.restaurant-card-ui {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-info-ui {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.text-details-ui h3 { /* Required <h3> */
+    color: #007bff;
+    margin: 0;
+    font-size: 18px;
+}
+
+.booking-fee-ui {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.rating-ui {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ffc107;
+}
+
+.booking-status-ui {
+    text-align: right;
+}
+
+.available-text-ui {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.book-reservation-button-ui { /* Required button label */
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* --- MY BOOKINGS PAGE (My Booking Page UI) --- */
+.my-bookings-banner-ui {
+    background-color: #007bff;
+    color: white;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-bookings-heading-ui { /* Required <h1> */
+    margin: 0;
+    font-size: 32px;
+}
+
+.search-my-bookings-ui input {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-my-bookings-ui button {
+    padding: 8px 15px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.my-bookings-content-wrapper-ui {
+    /* Same as results-content-wrapper-ui */
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.booking-card-ui-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.booking-info-left-ui {
+    /* Same styles as restaurant-info-ui */
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.booking-time-date-ui {
+    text-align: right;
+}
+
+.booking-time-ui {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.booking-date-ui {
+    color: #6c757d;
+}
+
+/* --- DOWNLOAD APP SECTION (Styling) --- */
+.download-app-section-ui {
+    background-color: white;
+    padding: 60px 0;
+    margin-top: 30px;
+}
+
+.app-content-ui {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-hand-image {
+    /* Placeholder for the hand holding phone image */
+    width: 30%;
+    height: 493px;
+}
+
+.app-text-ui {
+    width: 60%;
+}
+
+.phone-input-ui input {
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px 0 0 4px;
+    min-width: 250px;
+}
+
+.send-sms-button-ui {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.app-stores-ui {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.store-button-ui {
+    padding: 10px 20px;
+    background-color: #343a40; /* Dark color for store buttons */
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+/* --- FOOTER --- */
+.app-footer-ui {
+  background-color: #007bff;
+  color: white;
+  padding: 40px 0 10px;
+}
+.footer-logo{
+    width: 100px;
+    height: 100px;
+    top: 32px;
+    left: 24px;
+
+}
+
+.footer-content-main-ui {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-logo-ui {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.footer-links-ui {
+    display: flex;
+    gap: 50px;
+}
+
+.footer-links-ui ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links-ui li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-links-ui li:before {
+    content: ""; /* Removed the explicit '>' symbol for cleaner CSS */
+}
+
+.footer-copyright-ui {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+}
+
+
+/* --- BOOKING INTERFACE STYLES --- */
+
+.booking-page-ui-wrapper {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.booking-card-main-ui {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-restaurant-name-ui { /* Using required <h3> tag in component */
+    color: #007bff;
+    margin-top: 0;
+}
+
+.booking-address-ui {
+    color: #6c757d;
+}
+
+.section-title-ui {
+    color: #343a40;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 5px;
+}
+
+/* Date Selector Grid */
+.date-selector-ui {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.date-tile-ui {
+    flex: 1;
+    text-align: center;
+    padding: 10px 5px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.date-tile-ui:hover {
+    background-color: #f0f8ff;
+}
+
+.date-tile-ui.selected {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+    transform: scale(1.05);
+}
+
+.day-name-ui {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.date-number-ui {
+    display: block;
+    font-size: 20px;
+}
+
+/* Time Slot Selector */
+.time-slots-container-ui {
+    margin-bottom: 30px;
+}
+
+.time-of-day-heading-ui { /* Required <p> tag */
+    font-weight: bold;
+    color: #343a40;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.today-label-ui {
+    font-weight: normal;
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+.slots-grid-ui {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.time-slot-button-ui {
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    background-color: #f8f9fa;
+    color: #343a40;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.time-slot-button-ui.selected {
+    background-color: #28a745; /* Green selection color */
+    border-color: #28a745;
+    color: white;
+    font-weight: bold;
+}
+
+.confirm-booking-button-ui {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.confirm-booking-button-ui:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.confirm-booking-button-ui:disabled {
+    background-color: #a0c3e8;
+    cursor: not-allowed;
+}
+
+
+/* --- UPDATED HERO SECTION STYLES (Background (1).jpg) --- */
+
+.hero-section-ui-new {
+    /* New styles for the top section: light blue gradient background, full width */
+    background: linear-gradient(to right, #ffffff, #f0f8ff); /* Faint gradient/light blue tint */
+    padding: 80px 40px 100px; /* Increased bottom padding to accommodate the floating search box */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-content-ui-new {
+    max-width: 50%;
+}
+
+.hero-description {
+    max-width: 400px;
+}
+
+.find-restaurants-button-ui {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.chef-avatar-ui {
+    /* Placeholder size for chef image, centered in an orange circle */
+    width: 300px;
+    height: 300px;
+    background-color: #ff8c00; /* Orange color matching the image */
+    border-radius: 50%;
+    /* Add styling here for the chef image itself if available */
+}
+
+/* --- 2. SEARCH AND SERVICE ICONS SECTION (Floating Box) --- */
+.search-and-icons-wrapper-ui {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-50%); /* Crucial: Lifts the box halfway into the hero section */
+    position: relative;
+    z-index: 10;
+}
+
+.search-form-container-ui-standalone {
+    margin-bottom: 25px;
+}
+
+.search-form-ui-standalone {
+    display: flex;
+    gap: 10px;
+}
+
+.search-form-ui-standalone .dropdown-wrapper-ui {
+    flex: 1;
+    position: relative;
+}
+
+.search-form-ui-standalone input[type="text"] {
+    /* Input styled to look like the dropdown container in the image */
+    width: 100%;
+    padding: 10px 15px;
+    padding-left: 35px; /* Space for the 'Q' icon */
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+}
+
+.search-form-ui-standalone .dropdown-wrapper-ui::before {
+    content: '🔍'; /* Use a magnifying glass emoji/icon */
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    font-size: 16px;
+    z-index: 20;
+}
+
+.visually-hidden-select {
+    /* Hide the functional select box behind the styled input */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.search-form-ui-standalone .search-button-ui {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 20px;
+    min-width: 120px;
+}
+
+.you-may-be-looking-for-ui {
+    text-align: center;
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Service Icons Section - Below Search Bar */
+.icon-list-ui-standalone {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.service-icon-card-ui-new {
+    flex: 1;
+    text-align: center;
+    padding: 15px 5px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    cursor: pointer;
+}
+
+.service-icon-card-ui-new .icon-placeholder {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 5px;
+    color: #343a40;
+}
+
+.service-icon-card-ui-new.active {
+    /* Blue highlight for the active icon (Reservations) */
+    background-color: #f0f8ff;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.service-icon-card-ui-new.active .icon-placeholder,
+.service-icon-card-ui-new.active p {
+    color: #007bff;
+}
+
+/* --- Rest of the previously added CSS styles for sections 3, 4, 5, 6, 7, 8, 9 remain valid below --- */
+
+/* --- 5. RESTAURANT DETAILS/LOGO SECTION (Table Reservation Details) --- */
+.restaurant-details-section-ui {
+    background-color: #e9ecef; /* Light gray/blue background from the design */
+    /* padding: 40px 40px; */
+    margin-top: 50px; 
+    display: flex;
+    justify-content: center;
+}
+
+.details-content-ui {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.large-logo-ui {
+    width: 20%;
+    text-align: center;
+    color: #343a40;
+    /* width: 552; */
+    /* height: 552;
+    angle: 0 deg;
+    opacity: 1;
+    top: 48px;
+    left: 384px; */
+
+}
+
+.large-logo-ui img {
+    /* Style for the actual RestaurantLogo image (fork/knife icon) */
+    /* width: 100px; 
+    height: auto;
+    display: block;
+    margin: 0 auto 10px; */
+
+    width: 352px;
+    height: 352px;
+    opacity: 1;
+    top: 48px;
+    left: 384px;
+
+}
+
+.large-logo-ui h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.large-logo-ui p {
+    font-size: 16px;
+    margin: 0;
+    color: #6c757d;
+}
+
+.details-text-ui {
+    width: 60%;
+}
+
+.details-title-ui {
+    color: #007bff;
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.details-text-ui ul {
+    /* Remove default bullets for custom checkmark/tick list */
+    list-style: none; 
+    padding: 0;
+    color: #343a40;
+    font-size: 16px;
+}
+
+.details-text-ui li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.details-text-ui li::before {
+    /* Custom checkmark/bullet style */
+    content: "✔️"; 
+    position: absolute;
+    left: 0;
+    color: #28a745; /* Green color for the tick */
+}
+
+
+/* --- 6. READ OUR LATEST NEWS SECTION --- */
+.news-section-ui {
+    max-width: 1200px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.news-section-ui h2 {
+    color: #343a40;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.news-cards-ui {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.news-card-ui {
+    flex: 1;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    overflow: hidden;
+}
+
+/* Placeholder for news image area */
+.news-card-ui::before {  
+    display: block; 
+    height: 180px; /* Tall image area matching design */
+    background-color: #f0f0f0; 
+    background-size: cover;
+    background-position: center;
+}
+
+.news-card-ui p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #343a40;
+    padding: 10px 15px;
+    margin: 0;
+}
+
+
+/* --- 7. TABLE BOOKING & STAFF IMAGE SECTION --- */
+.table-booking-staff-ui {
+    background-color: #E7F0FF; /* Light gray/blue background */
+    padding: 40px 0;
+}
+
+.staff-content-ui {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0 20px;
+}
+
+.booking-text-ui {
+    width: 50%;
+}
+
+.booking-staff-title-ui {
+    color: #1B3C74;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.staff-photo-ui {
+    width: 50%;
+    height: 350px;
+}
+
+
+/* --- 8. FAQ SECTION --- */
+.faq-section-ui {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding: 0 20px;
+}
+.FAQ{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.faq-background-image-ui {
+    width: 50%;
+    height: 350px;
+    /* Placeholder: The image shows a modern dining room interior */
+    background-image: url('../assets/FAQ.png'); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-content-ui {
+    width: 50%;
+}
+
+.faq-content-ui h2 {
+    color: #343a40;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.faq-accordion-ui {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-item {
+    padding: 15px;
+    border-bottom: 1px solid #ced4da;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: white;
+    transition: background-color 0.1s;
+}
+
+.faq-item:hover {
+    background-color: #f8f9fa;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
