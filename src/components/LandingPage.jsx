@@ -66,6 +66,7 @@ const LandingPage = () => {
     // As per the requirement, this leads to available restaurants. We'll simulate a general search/selection page.
     // For now, let's navigate to the search bar to prompt selection.
     alert("Please select a location to find restaurants.");
+    alert("Check");
     // Optionally: navigate('/restaurants') and show an empty state.
   };
 
