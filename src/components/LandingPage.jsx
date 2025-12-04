@@ -120,11 +120,11 @@ const LandingPage = () => {
                 className="visually-hidden-select"
               >
                 <option value="">Select State</option>
-                {states.map((state) => (
+                <li>{states.map((state) => (
                   <option key={state} value={state}>
                     {state}
                   </option>
-                ))}
+                ))}</li>
               </select>
             </div>
 
@@ -138,11 +138,11 @@ const LandingPage = () => {
                 className="visually-hidden-select"
               >
                 <option value="">Select City</option>
-                {cities.map((city) => (
+                <li>{cities.map((city) => (
                   <option key={city} value={city}>
                     {city}
                   </option>
-                ))}
+                ))}</li>
               </select>
             </div>
 
