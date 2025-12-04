@@ -256,7 +256,12 @@ main {
     color: #343a40;
     margin-bottom: 5px;
 }
-
+li{
+    width: 100%;
+    display: block;
+    padding: 5px 5px;
+    border: 1px solid black;
+}
 .sub-header-ui {
     color: #6c757d;
     margin-bottom: 20px;
