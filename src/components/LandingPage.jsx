@@ -65,8 +65,10 @@ const LandingPage = () => {
     // Navigate to a search page or the search results page, perhaps without initial results
     // As per the requirement, this leads to available restaurants. We'll simulate a general search/selection page.
     // For now, let's navigate to the search bar to prompt selection.
-    alert("Please select a location to find restaurants.");
-    alert("Check");
+    
+    navigate(`/restaurants`);
+    // alert("Please select a location to find restaurants.");
+    // alert("Check");
     // Optionally: navigate('/restaurants') and show an empty state.
   };
 
@@ -79,8 +81,7 @@ const LandingPage = () => {
           <h2>Skip the wait! Reserve Online</h2>
           <h1 className="hero-title-ui">Table Reservation</h1>
           <p className="hero-description">
-            Connect instantly with our platform to reserve tables at your
-            favorite restaurants.
+            Connect instantly with our platform to reserve tables at your favorite restaurants.
           </p>
           <button
             onClick={handleFindRestaurantsClick}
@@ -89,6 +90,7 @@ const LandingPage = () => {
             Find Restaurants
           </button>
         </div>
+
         <div>
           {/*  - Placeholder for the chef with spatula and whisk */}
           <img className="chef-avatar-ui" src={chef} alt="" />
@@ -109,7 +111,7 @@ const LandingPage = () => {
 
             {/* State Dropdown */}
             <div id="state" className="dropdown-wrapper-ui">
-              <input type="text" value="Q State" readOnly placeholder="State" />
+              <input type="text" value={selectedState || "State"} readOnly placeholder="State" />
               {/* Using input placeholder as per image, but functionally using select */}
               <select
                 value={selectedState}
@@ -128,7 +130,7 @@ const LandingPage = () => {
 
             {/* City Dropdown */}
             <div id="city" className="dropdown-wrapper-ui">
-              <input type="text" value="Q City" readOnly placeholder="City" />
+              <input type="text" value={selectedCity || "City"} readOnly placeholder="City" />
               <select
                 value={selectedCity}
                 onChange={(e) => setSelectedCity(e.target.value)}
@@ -151,7 +153,7 @@ const LandingPage = () => {
               disabled={!selectedState || !selectedCity || isLoading}
               className="search-button-ui"
             >
-              <span className="search-icon-ui">Q</span> Search
+              <span className="search-icon-ui">🔍</span> Search
             </button>
           </form>
         </div>

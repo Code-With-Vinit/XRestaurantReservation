@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import RestaurantLogo from "../assets/Restaurant-Logo.png";
 import '../styles/App.css';
 
 const Header = () => {
@@ -14,7 +15,8 @@ const Header = () => {
       <div className="header-main-ui">
         <Link to="/" className="logo-link-ui">
           {/*  */}
-          <span className="logo-text-ui">Restaurant</span>
+          {/* <span className="logo-text-ui">Restaurant</span> */}
+          <img className='footer-logo-banner' src={RestaurantLogo} alt="" />
         </Link>
         <nav className="nav-bar-ui">
           <Link to="/" className={`nav-link-ui ${isActive('/') ? 'active' : ''}`}>Find Restaurants</Link>

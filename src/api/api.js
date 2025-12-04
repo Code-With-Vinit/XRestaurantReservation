@@ -49,11 +49,11 @@ export const getRestaurants = async (state, city) => {
     });
     // Extract required fields: Name, Address, City, State, Overall Rating
     return response.data.map(r => ({
-      name: r.RestaurantName,
-      address: r.Address,
-      city: r.City,
-      state: r.State,
-      rating: r['Overall Rating']
+      name: r.restaurantName,
+      address: r.address,
+      city: r.city,
+      state: r.state,
+      rating: r.rating['Overall Rating']
     }));
   } catch (error) {
     console.error(`Error fetching restaurants for ${city}, ${state}:`, error);
