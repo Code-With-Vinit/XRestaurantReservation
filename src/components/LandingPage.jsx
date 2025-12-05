@@ -121,9 +121,13 @@ const LandingPage = () => {
               >
                 <option value="">Select State</option>
                 {states.map((state) => (
-                  <option key={state} value={state}>
-                    <li>{state}</li>
-                  </option>
+                   <ul>
+                    <li>
+                    <option key={state} value={state}>
+                          {state}
+                    </option>
+                  </li>
+                  </ul>
                 ))}
               </select>
             </div>
@@ -139,9 +143,13 @@ const LandingPage = () => {
               >
                 <option value="">Select City</option>
                 {cities.map((city) => (
-                 <option key={city} value={city}>
-                    <li>{city}</li>
-                  </option>
+                  <ul>
+                    <li>
+                    <option key={city} value={city}>
+                          {city}
+                    </option>
+                  </li>
+                  </ul>
                 ))}
               </select>
             </div>
