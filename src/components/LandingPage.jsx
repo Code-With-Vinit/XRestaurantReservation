@@ -110,9 +110,10 @@ const LandingPage = () => {
             )}
 
             {/* State Dropdown */}
-            <div id="state" className="dropdown-wrapper-ui">
+
+             <div id="state" className="dropdown-wrapper-ui">
               <input type="text" value={selectedState || "State"} readOnly placeholder="State" />
-              {/* Using input placeholder as per image, but functionally using select */}
+               {/* Using input placeholder as per image, but functionally using select  */}
               <select
                 value={selectedState}
                 onChange={(e) => setSelectedState(e.target.value)}
@@ -130,7 +131,8 @@ const LandingPage = () => {
                   </ul>
                 ))}
               </select>
-            </div>
+             </div>  
+
 
             {/* City Dropdown */}
             <div id="city" className="dropdown-wrapper-ui">
